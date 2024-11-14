@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Check in admin table first using the admin connection
         $stmt = $admin_conn->prepare("SELECT * FROM admins WHERE email = ?");
+        if ($stmt === false) { die("Prepare failed: " . $admin_conn->error);}
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $admin_result = $stmt->get_result();
