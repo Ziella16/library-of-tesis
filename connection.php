@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Connection for admin database
-$admin_dbname = "admin_dashboard"; // Replace with your actual admin database name
+$admin_dbname = "evetubp_library-of-tesis"; // Replace with your actual admin database name
 $admin_conn = new mysqli($servername, $username, $password, $admin_dbname);
 
 // Check connection
