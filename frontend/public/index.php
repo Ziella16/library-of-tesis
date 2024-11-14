@@ -36,7 +36,7 @@
         <!-- Login Form -->
         <div class="form-box login">
             <h2>Login</h2>
-            <form id="loginForm" method="POST" action="http://localhost/myproject/Login_verification.php">
+            <form id="loginForm" method="POST" action="../../Login_verification.php">
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="mail-outline"></ion-icon>
