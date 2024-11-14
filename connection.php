@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "userregisteration"; // Your database name
+$username = "evetubp";
+$password = "Z6KJNxBRu4K+547u";
+$dbname = "evetubp_libraryoftesis"; // Your database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
