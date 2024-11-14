@@ -1,0 +1,366 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #162938;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: width 0.3s;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    background-color: #1c3b4a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu-item.active,
+.menu-item:hover {
+    background-color: #1c3b4a;
+}
+
+.menu-item .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.submenu {
+    margin-top: 20px;
+}
+
+.submenu h3 {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #d3d3d3;
+}
+
+.submenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu ul li {
+    margin-bottom: 10px;
+}
+
+.submenu ul li a {
+    text-decoration: none;
+    color: #d3d3d3;
+    font-size: 0.9em;
+    padding: 5px;
+    border-radius: 4px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.submenu ul li a:hover {
+    background-color: #1c3b4a;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f0f0f0;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f8f8;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-header h4 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #162938;
+}
+
+.card-header p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body p {
+    margin: 0;
+    color: #444;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.menu-item {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: #e9ecef;
+}
+
+.submenu {
+    margin-bottom: 15px;
+}
+
+.submenu h3 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submenu h3:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.submenu.open h3 {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.submenu ul {
+    list-style: none;
+    padding-left: 15px;
+    display: none;
+}
+
+.submenu ul li {
+    margin-bottom: 10px;
+}
+
+.submenu ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.submenu ul li a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.submenu.open ul {
+    display: block;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.arrow.open {
+    transform: rotate(90deg);
+}
+
+.card-grid {
+    display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card-header {
+    margin-bottom: 15px;
+}
+
+.card-header h4 {
+    margin: 0;
+}
+
+.card-body p {
+    margin: 0;
+}
+
+/* Gaya untuk halaman Settings */
+.settings-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff; /* Tukar kepada putih */
+    color: #000; /* Tukar kepada hitam untuk teks */
+    font-family: sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    margin: 0;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+.modal-content input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+.modal-content .close {
+    background-color: #dc3545;
+}
+
+.modal-content .close:hover {
+    background-color: #c82333;
+}
+
+.modal-content .input-group {
+    margin-bottom: 10px;
+}
